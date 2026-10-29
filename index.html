@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Michael Yeremia</title>
-<meta name="description" content="Portfolio of Michael Yeremia, Data Science undergraduate at BINUS University.">
+<meta name="description" content="Michael Yeremia is a BINUS University Data Science undergraduate focused on machine learning, data analysis, model evaluation, and deployment.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap">
@@ -450,7 +450,7 @@
         >
         <p class="label">Data Science &middot; Python &middot; SQL</p>
         <h1>Michael Yeremia</h1>
-        <p class="sub">Data Science undergraduate at BINUS University focused on classification, model evaluation, and deploying machine learning applications with Python, SQL, and AWS.</p>
+        <p class="sub">Data Science undergraduate at BINUS University with hands-on projects in classification, time-series forecasting, and AWS deployment. I use Python, SQL, and machine learning tools to prepare data, compare models, and evaluate results.</p>
         <p class="status"><i aria-hidden="true"></i>Seeking a 1-year internship from February 2027</p>
         <div class="cta">
           <a class="btn primary" href="#work">See my work</a>
@@ -478,8 +478,8 @@
       </div>
 
       <aside class="glance" aria-label="Results at a glance">
-        <p class="label">Results at a glance</p>
-        <h2>One headline figure per project</h2>
+        <p class="label">Selected project metrics</p>
+        <h2>Results from my project evaluations</h2>
         <ul>
           <li>
             <div class="g-row"><span class="g-name">Credit Score Prediction</span><span class="g-val">0.72</span></div>
@@ -494,10 +494,10 @@
           <li>
             <div class="g-row"><span class="g-name">LSTM Stock Prediction</span><span class="g-val">2.44%</span></div>
             <p class="label g-metric">MAPE · AMD · baseline LSTM</p>
-            <p class="g-note">Lower is better. The baseline beat the stacked model on both stocks.</p>
+            <p class="g-note">Test MAPE: 2.44% for AMD. The baseline beat the stacked model on both stocks.</p>
           </li>
         </ul>
-        <p class="g-note">F1 scores are out of 1.0. MAPE is an error percentage; lower is better.</p>
+        <p class="g-note">F1 scores summarize classification performance (0–1); MAPE measures forecast error (lower is better). Results depend on each project's dataset and test setup.</p>
       </aside>
     </div>
   </div>
@@ -505,11 +505,11 @@
   <section id="about">
     <div class="sec-head">
       <p class="label">About</p>
-      <h2>Comparing models, then checking the result</h2>
+      <h2>Applied data science, from preparation to evaluation</h2>
     </div>
     <div class="about-text">
-      <p>I'm a Data Science student at BINUS University (GPA 3.44/4.00, graduating in 2028). My projects cover classification and time-series forecasting in Python. On each one I compare several models and choose the winner with a metric that fits the data.</p>
-      <p>Alongside my studies I worked part-time on BINUS's marketing and sales team, keeping prospect lists in Excel, and mentored new students as a Freshman Partner. I'm looking for a 1-year Data Analyst or Data Science internship starting February 2027.</p>
+      <p>I'm a Data Science student at BINUS University (GPA 3.44/4.00, graduating in 2028), interested in machine learning and applied data science. My projects span classification and time-series forecasting, with an emphasis on feature preparation, comparing models, selecting appropriate evaluation metrics, and checking performance on held-out data.</p>
+      <p>Alongside my studies, I worked part-time on BINUS's marketing and sales team, maintaining structured prospect lists and reporting in Excel, and mentored new students as a Freshman Partner. I'm seeking a one-year internship starting February 2027, especially in Data Science or machine learning, while remaining open to data analytics roles.</p>
     </div>
   </section>
 
@@ -554,7 +554,7 @@
     <div class="sec-head">
       <p class="label">Selected work</p>
       <h2>Three projects, each with the numbers</h2>
-      <p>Every figure below comes from the project's own evaluation. Source code is on GitHub.</p>
+      <p>Selected results from each project’s own test setup, with links to the source code for more detail.</p>
     </div>
 
     <div class="projects">
@@ -563,7 +563,8 @@
           <p class="label">Classification &middot; Streamlit app</p>
           <h3>Credit Score Prediction</h3>
           <p class="desc">Compared five classifiers (Random Forest, Gradient Boosting, Decision Tree, AdaBoost and Logistic Regression) to predict credit score as Good, Standard or Poor, on a lecturer-provided dataset of about 25,000 records.</p>
-          <p class="desc">Random Forest performed best. Because the classes are imbalanced, I selected the model by weighted F1. Experiments are tracked in MLflow, with a FastAPI inference backend and a Streamlit app that accepts single and batch CSV predictions.</p>
+          <p class="desc">Random Forest performed best among the five models tested. Because the target classes are imbalanced, I used weighted F1 alongside accuracy to compare performance. Experiments are tracked in MLflow, with a FastAPI inference backend and a Streamlit app for single and batch CSV predictions.</p>
+          <p class="desc"><strong>Limitation:</strong> These results come from a lecturer-provided dataset and should not be interpreted as evidence that the model is ready for real lending decisions. A real credit-risk assessment would require further validation, class-level error analysis, and checks for fairness and data leakage.</p>
           <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">MLflow</span><span class="tag">FastAPI</span><span class="tag">Streamlit</span></div>
           <div class="actions">
             <a class="btn" href="https://github.com/jeraamii/credit-score-prediction" target="_blank" rel="noopener">View source</a>
@@ -585,7 +586,7 @@
         <div class="main">
           <p class="label">Classification &middot; AWS deployment</p>
           <h3>Spaceship Titanic Classifier</h3>
-          <p class="desc">Compared Logistic Regression, Random Forest and XGBoost. I engineered features from cabin deck, cabin side and total spending, and imputed missing values. XGBoost performed best on a held-out test set of 1,739 passengers, while Random Forest showed a generalization gap of about 0.95 training accuracy against 0.80 test accuracy.</p>
+          <p class="desc">Compared Logistic Regression, Random Forest and XGBoost. I engineered features from cabin deck, cabin side and total spending, and imputed missing values. XGBoost achieved a Macro F1 of 0.8096 on a held-out test set of 1,739 passengers. I also checked generalization: Random Forest reached about 0.95 training accuracy versus 0.80 test accuracy, indicating a substantial train–test gap.</p>
           <p class="desc">Deployed end-to-end on AWS: a SageMaker real-time endpoint serving a Streamlit app hosted on Amazon EC2, run as a systemd service and set up with a user-data bootstrap script. Built on AWS Academy; the code and screenshots are in the repository.</p>
           <div class="tags"><span class="tag">XGBoost</span><span class="tag">Feature engineering</span><span class="tag">AWS SageMaker</span><span class="tag">Amazon EC2</span><span class="tag">Streamlit</span></div>
           <div class="actions">
@@ -607,7 +608,7 @@
           <p class="label">Time-series forecasting</p>
           <h3>LSTM Stock Price Prediction</h3>
           <p class="desc">Compared a baseline LSTM with a stacked, dropout-regularized LSTM to forecast next-day closing prices for AMD and AAPL, using a five-day input window and more than 30 years of daily data.</p>
-          <p class="desc">The most recent year is held out as the test period, and the scaler is fitted on training data only to avoid leakage. The simpler baseline outperformed the stacked model on both stocks. Prediction lag is documented as a limitation.</p>
+          <p class="desc">The most recent year is held out as the test period, and the scaler is fitted on training data only to reduce leakage risk. The baseline LSTM achieved a test MAPE of 2.44% on AMD and 4.78% on AAPL, outperforming the stacked model on both stocks. Prediction lag is a documented limitation, and these results are not evidence of a profitable trading strategy.</p>
           <div class="tags"><span class="tag">TensorFlow/Keras</span><span class="tag">LSTM</span><span class="tag">Time series</span><span class="tag">Model evaluation</span></div>
           <div class="actions">
             <a class="btn" href="https://github.com/jeraamii/lstm-stock-prediction" target="_blank" rel="noopener">View source</a>
@@ -630,7 +631,7 @@
     </div>
 
     <div class="more">
-      <p>The code for each project above, and any other repositories, are on my GitHub profile.</p>
+      <p>Explore the repositories for implementation details, evaluation, and supporting project materials.</p>
       <a class="btn" href="https://github.com/jeraamii" target="_blank" rel="noopener">Browse GitHub</a>
     </div>
   </section>
@@ -638,15 +639,15 @@
   <section id="skills">
     <div class="sec-head">
       <p class="label">Skills</p>
-      <h2>What I work with</h2>
+      <h2>Technical skills</h2>
     </div>
     <div class="caps">
       <div class="cap">
-        <h3>Data analysis</h3>
+        <h3>Data analysis and preparation</h3>
         <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Microsoft Excel</span><span class="tag">Exploratory Data Analysis</span><span class="tag">Matplotlib</span></div>
       </div>
       <div class="cap">
-        <h3>Machine learning</h3>
+        <h3>Machine learning and forecasting</h3>
         <div class="tags"><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span><span class="tag">TensorFlow/Keras</span><span class="tag">LSTM forecasting</span><span class="tag">Feature engineering</span><span class="tag">Model evaluation</span></div>
       </div>
       <div class="cap">
@@ -706,8 +707,8 @@
   <div class="wrap">
     <section id="contact" class="contact">
       <p class="label">Contact</p>
-      <h2>Looking for a 1-year internship from February 2027</h2>
-      <p class="lead">I'm applying for Data Analyst and Data Science internships. If you have a role that fits, I'd like to hear about it.</p>
+      <h2>Available for a one-year internship from February 2027</h2>
+      <p class="lead">My primary interests are Data Science and machine learning, and I’m also open to data analytics roles. If you’re hiring for a relevant internship, I’d welcome the opportunity to connect.</p>
       <div class="mail">
         <a class="addr" id="mail-text" href="mailto:michaelyeremia61378@gmail.com">michaelyeremia61378@gmail.com</a>
         <button class="btn" id="copy-mail" type="button">Copy email</button>

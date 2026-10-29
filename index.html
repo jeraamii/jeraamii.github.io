@@ -407,6 +407,18 @@
     *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
   }
 
+/* Profile photo */
+.profile-photo {
+  display: block;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  margin-bottom: 1.5rem;
+}
+  
 </style>
 
 <style>body{margin:0}</style>
@@ -430,6 +442,13 @@
   <div class="hero">
     <div class="hero-grid">
       <div>
+        <img
+          class="profile-photo"
+          src="images/michaelyeremia.jpeg"
+          alt="Portrait of Michael Yeremia"
+          width="140"
+          height="140"
+        >
         <p class="label">Data Science &middot; Python &middot; SQL</p>
         <h1>Michael Yeremia</h1>
         <p class="sub">Data Science undergraduate at BINUS University, building and evaluating machine learning projects in Python.</p>
